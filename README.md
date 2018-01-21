@@ -2,6 +2,12 @@
 
 This app was created and built with  `create-react-app`
 
+## Build Instructions
+```
+npm install; 
+npm run start;
+```
+
 ## Issue
 Once the id token from Cognito times out Amplify does not auto refresh the token in order to grab new access keys. Prior to 0.1.36 amplify just used the old access keys now the library realizes the keys are invalid and tries to grab new ones. When it does this it presents the old id token to Cognito and cognito just returns an error cause the token is expired
 
